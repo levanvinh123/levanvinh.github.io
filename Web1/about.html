@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Vinh Le Van</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #1a1a1a;
+            --neon-blue: #00d4ff;
+            --neon-white: #ffffff;
+            --muted-text: #b0b0b0;
+            --success-green: #00ff88;
+            --warning-red: #ff3366;
+        }
+        
+        body {
+            background: var(--primary-bg);
+            color: var(--neon-white);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .orbitron {
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .jetbrains {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .neon-glow {
+            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
+        }
+        
+        .neon-border {
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px rgba(0, 212, 255, 0.1);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover {
+            border-left-color: var(--neon-blue);
+            padding-left: 2.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--neon-blue), var(--success-green));
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+        
+        .nav-link {
+            position: relative;
+            color: var(--muted-text);
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--neon-blue);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--neon-blue);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .philosophy-card {
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        
+        .philosophy-card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+        
+        .achievement-badge {
+            background: linear-gradient(135deg, var(--neon-blue), var(--success-green));
+            color: var(--primary-bg);
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="orbitron text-xl font-bold neon-glow">VINH LE VAN</div>
+                <div class="flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link text-neon-blue">About</a>
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="orbitron text-5xl md:text-7xl font-black mb-6 neon-glow">ABOUT ME</h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    Passionate about engineering, innovation, and turning theoretical knowledge into real-world solutions
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Introduction -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="orbitron text-3xl md:text-4xl font-bold mb-6 neon-glow">Who I Am</h2>
+                    <p class="text-gray-300 text-lg mb-6">
+                        Curiosity defines how I learn and build. I'm deeply fascinated by the principles that govern the physical world—the way energy transforms, systems stabilize, and machines adapt. Over the past few years, I've immersed myself in hands-on engineering projects, reading, and scientific exploration to push my understanding further.
+                    </p>
+                    <p class="text-gray-300 text-lg mb-6">
+                        I believe that good engineering is not only about precision but also about creativity—merging technical knowledge with imagination to design systems that work efficiently and beautifully.
+                    </p>
+                    <div class="flex flex-wrap">
+                        <span class="achievement-badge">High School Student</span>
+                        <span class="achievement-badge">Grade 12</span>
+                        <span class="achievement-badge">Vietnam</span>
+                        <span class="achievement-badge">Future Engineer</span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-neon-blue">
+                        <img src="resources/profile-picture.jpg" alt="Vinh Le Van Profile Picture" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Background & Education -->
+    <section class="py-20 bg-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="orbitron text-4xl md:text-5xl font-bold text-center mb-12 neon-glow">Background & Education</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="philosophy-card">
+                    <h3 class="orbitron text-2xl font-bold mb-4 neon-glow">Academic Achievements</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">SAT Score</span>
+                            <span class="orbitron text-xl font-bold neon-glow">1550</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">IELTS Score</span>
+                            <span class="orbitron text-xl font-bold neon-glow">7.5</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Math Competition</span>
+                            <span class="orbitron text-xl font-bold neon-glow">1st Prize</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-300">Current Grade</span>
+                            <span class="orbitron text-xl font-bold neon-glow">Grade 11</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="philosophy-card">
+                    <h3 class="orbitron text-2xl font-bold mb-4 neon-glow">Technical Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Programming</span>
+                                <span class="text-neon-blue">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Electronics</span>
+                                <span class="text-neon-blue">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">CAD Design</span>
+                                <span class="text-neon-blue">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-300">Problem Solving</span>
+                                <span class="text-neon-blue">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="orbitron text-4xl md:text-5xl font-bold text-center mb-12 neon-glow">My Journey</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline-item">
+                    <h3 class="orbitron text-xl font-bold mb-2 neon-glow">2021 - First Programming Experience</h3>
+                    <p class="text-gray-300 mb-2">Started learning Python and C++ through online courses and small projects. Discovered passion for problem-solving through coding.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Python</span>
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">C++</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="orbitron text-xl font-bold mb-2 neon-glow">2022 - Arduino Discovery</h3>
+                    <p class="text-gray-300 mb-2">Built first Arduino projects including LED displays, sensor interfaces, and basic robotic systems. Started understanding embedded systems.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Arduino</span>
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Embedded C</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="orbitron text-xl font-bold mb-2 neon-glow">2023 - Competition Success</h3>
+                    <p class="text-gray-300 mb-2">Won first prize in city-level Math Competition. Started advanced robotics projects and CAD design exploration.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="achievement-badge">1st Prize Math</span>
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Fusion 360</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="orbitron text-xl font-bold mb-2 neon-glow">2024 - IoT & Web Integration</h3>
+                    <p class="text-gray-300 mb-2">Developed Raspberry Pi data logging systems with web dashboards. Started preparing for university applications and standardized tests.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Raspberry Pi</span>
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Flask</span>
+                        <span class="achievement-badge">SAT 1550</span>
+                        <span class="achievement-badge">IELTS 7.5</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3 class="orbitron text-xl font-bold mb-2 neon-glow">2025 - University Preparation</h3>
+                    <p class="text-gray-300 mb-2">Currently preparing to study Mechanical or Mechatronic Engineering in the U.S. Building portfolio and expanding technical skills.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="achievement-badge">University Apps</span>
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Advanced CAD</span>
+                        <span class="jetbrains text-xs bg-gray-800 px-2 py-1 rounded text-neon-blue">Control Theory</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Philosophy -->
+    <section class="py-20 bg-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="orbitron text-4xl md:text-5xl font-bold text-center mb-12 neon-glow">Engineering Philosophy</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="philosophy-card text-center">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="orbitron text-xl font-bold mb-4 neon-glow">Precision</h3>
+                    <p class="text-gray-300">Every component, every calculation, every design decision must be precise. Engineering excellence demands attention to the smallest details.</p>
+                </div>
+                
+                <div class="philosophy-card text-center">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="orbitron text-xl font-bold mb-4 neon-glow">Innovation</h3>
+                    <p class="text-gray-300">True engineering goes beyond following established patterns. It's about finding creative solutions to complex problems through innovative thinking.</p>
+                </div>
+                
+                <div class="philosophy-card text-center">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="orbitron text-xl font-bold mb-4 neon-glow">Impact</h3>
+                    <p class="text-gray-300">Engineering should improve human life and extend our capabilities. Every project should contribute positively to society and sustainability.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 philosophy-card">
+                <h3 class="orbitron text-2xl font-bold mb-4 neon-glow text-center">My Vision</h3>
+                <p class="text-gray-300 text-lg text-center max-w-4xl mx-auto">
+                    I view engineering as a way to extend human potential—to build tools that amplify thought, speed, and capability. My long-term goal is to contribute to robotic systems that improve efficiency, accessibility, and sustainability in the world. Through mechanical and mechatronic engineering, I aim to create solutions that bridge the gap between human needs and technological possibilities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="orbitron text-3xl md:text-4xl font-bold mb-6 neon-glow">Ready to Connect</h2>
+            <p class="text-gray-300 text-lg mb-8">
+                I'm always open to opportunities to learn, collaborate, or discuss ideas about engineering, robotics, and technology. Whether you're an educator, fellow student, or engineer—feel free to reach out.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="portfolio.html" class="bg-transparent border-2 border-neon-blue text-neon-blue px-8 py-4 rounded-lg text-lg font-semibold hover:bg-neon-blue hover:text-black transition-all duration-300">
+                    View My Work
+                </a>
+                <a href="contact.html" class="bg-transparent border-2 border-gray-600 text-gray-300 px-8 py-4 rounded-lg text-lg font-semibold hover:border-neon-blue hover:text-neon-blue transition-all duration-300">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="orbitron text-2xl font-bold neon-glow mb-4">VINH LE VAN</div>
+            <p class="text-gray-400 mb-6">Aspiring Mechanical Engineer • Vietnam • Grade 12</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:vinhle@gmail.com" class="text-gray-400 hover:text-neon-blue transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/vinhle" class="text-gray-400 hover:text-neon-blue transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"/>
+                    </svg>
+                </a>
+                <a href="https://github.com/vinhle" class="text-gray-400 hover:text-neon-blue transition-colors">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm mt-6">© 2024 Vinh Le. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animate skill bars on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const skillBars = entry.target.querySelectorAll('.skill-progress');
+                        skillBars.forEach(bar => {
+                            const width = bar.style.width;
+                            bar.style.width = '0%';
+                            setTimeout(() => {
+                                bar.style.width = width;
+                            }, 200);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            const skillsSection = document.querySelector('.philosophy-card');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+        });
+    </script>
+</body>
+</html>
