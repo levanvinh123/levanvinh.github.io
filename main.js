@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeContactForm();
     initializeProjectModals();
 });
-
 // Text animations for hero sections
 function initializeAnimations() {
     // Hero title animation
