@@ -1,5 +1,35 @@
 /* Vinh Le Van Portfolio - Shared Styles */
+/* Target all headings and paragraphs */
+h2, h3, p, span, li {
+    transition: all 0.3s ease;
+    display: inline-block; /* Allows transform to work on text */
+    cursor: default;
+}
 
+/* Give them a subtle pop and brightness when hovered */
+h2:hover, h3:hover, p:hover {
+    color: #fff; /* Make it brighter */
+    transform: translateX(5px); /* Subtle shift to the right */
+    text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+/* Special effect for the "Journey" timeline text */
+.timeline-item p:hover {
+    color: var(--neon-blue);
+}
+/* 3. Subtle lift and glow for all buttons/links */
+a:hover, button:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* 4. Make images "pop" slightly when hovered */
+img {
+    transition: transform 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
 /* CSS Variables for Theme */
 :root {
     --primary-bg: #0a0a0a;
