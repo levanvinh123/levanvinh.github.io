@@ -11,15 +11,17 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-6 py-4">
+    <nav id="mainNav" class="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out py-6 bg-black bg-opacity-90">
+        <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center">
-                <div class="orbitron text-xl font-bold neon-glow">VAN VINH LE</div>
+                <div class="orbitron text-xl font-bold neon-glow cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    VAN VINH LE
+                </div>
                 <div class="flex space-x-8">
-                    <a href="#home-section" class="nav-link text-neon-blue">Home</a>
-                    <a href="#web-section" class="nav-link text-neon-blue">Websites</a>
-                    <a href="#project-section" class="nav-link text-neon-blue">Projects</a>
-                    <a href="#contact-section" class="nav-link text-neon-blue">Contact</a>
+                    <a href="#home-section" class="nav-link text-gray-300 hover:text-neon-blue transition-colors duration-300 text-sm tracking-wider uppercase">Home</a>
+                    <a href="#web-section" class="nav-link text-gray-300 hover:text-neon-blue transition-colors duration-300 text-sm tracking-wider uppercase">Reading</a>
+                    <a href="#project-section" class="nav-link text-gray-300 hover:text-neon-blue transition-colors duration-300 text-sm tracking-wider uppercase">Projects</a>
+                    <a href="#contact-section" class="nav-link text-gray-300 hover:text-neon-blue transition-colors duration-300 text-sm tracking-wider uppercase">Contact</a>
                 </div>
             </div>
         </div>
@@ -63,27 +65,26 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                
-                <a href="https://lesswrong.com" target="_blank" class="no-underline group">
-                    <div class="philosophy-card h-full flex flex-col items-center text-center p-8 hover:-translate-y-2 transition-transform duration-300">
-                        <div class="h-20 w-full flex items-center justify-center mb-6">
-                            <img src="resources/lesswrong-logo.png" alt="LessWrong Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity filter invert"> 
-                            </div>
-                        
-                        <h3 class="orbitron text-xl font-bold mb-2 neon-glow">LessWrong</h3>
-                        <div class="w-12 h-1 bg-neon-blue mb-4 rounded-full"></div>
-                        <p class="text-gray-300 mb-4 text-sm flex-grow">
-                            This one is all about how to think better. It is a community for logic, philosophy, and figuring out how to avoid being biased. 
-                        <span class="text-neon-blue jetbrains text-sm border border-neon-blue px-3 py-1 rounded-full">
-                            lesswrong.com ↗
-                        </span>
-                    </div>
-                </a>
+    <a href="https://lesswrong.com" target="_blank" class="block group no-underline">
+        <div class="philosophy-card h-full flex flex-col items-center text-center p-8 transition-all duration-300">
+            <div class="h-20 w-full flex items-center justify-center mb-6">
+                <img src="resources/lesswrong-logo.png" alt="LessWrong Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity "> 
+            </div>
+            <h3 class="orbitron text-xl font-bold mb-2 neon-glow">LessWrong</h3>
+            <div class="w-12 h-1 bg-neon-blue mb-4 rounded-full transition-all duration-300 group-hover:w-24"></div>
+            <p class="text-gray-300 mb-4 text-sm flex-grow">
+                This one is all about how to think better. It is a community for logic, philosophy, and figuring out how to avoid being biased. 
+            </p>
+            <div class="text-neon-blue jetbrains text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Visit Website ↗
+            </div>
+        </div>
+    </a>
 
-                <a href="https://waitbutwhy.com" target="_blank" class="no-underline group">
+                <a href="https://waitbutwhy.com" target="_blank" class="block no-underline group">
                     <div class="philosophy-card h-full flex flex-col items-center text-center p-8 hover:-translate-y-2 transition-transform duration-300">
                          <div class="h-20 w-full flex items-center justify-center mb-6">
-                            <img src="resources/wbw-logo.png" alt="WaitButWhy Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img src="resources/wbw-logo.png" alt="WaitButWhy Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity ">
                         </div>
 
                         <h3 class="orbitron text-xl font-bold mb-2 neon-glow">Wait but why</h3>
@@ -91,16 +92,16 @@
                         <p class="text-gray-300 mb-4 text-sm flex-grow">
                             Really helpful for grasping big concepts. The author digs into every detail until the topic actually makes sense.
                         </p>
-                        <span class="text-neon-blue jetbrains text-sm border border-neon-blue px-3 py-1 rounded-full">
+                        <div class="text-neon-blue jetbrains text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             waitbutwhy.com ↗
-                        </span>
+                        </div>
                     </div>
                 </a>
 
                 <a href="https://www.quantamagazine.org" target="_blank" class="no-underline group">
                     <div class="philosophy-card h-full flex flex-col items-center text-center p-8 hover:-translate-y-2 transition-transform duration-300">
                          <div class="h-20 w-full flex items-center justify-center mb-6">
-                            <img src="resources/quanta-logo.png" alt="Quanta Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity">
+                            <img src="resources/quanta-logo.png" alt="Quanta Logo" class="h-full w-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity filter invert">
                         </div>
 
                         <h3 class="orbitron text-xl font-bold mb-2 neon-glow">Quanta magazine</h3>
@@ -108,7 +109,7 @@
                         <p class="text-gray-300 mb-4 text-sm flex-grow">
                             Lots of interesting science article here
                         </p>
-                        <span class="text-neon-blue jetbrains text-sm border border-neon-blue px-3 py-1 rounded-full">
+                        <span class="text-neon-blue jetbrains text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                             quantamagazine.org ↗
                         </span>
                     </div>
@@ -195,7 +196,7 @@
     <section id="contact-section" class="py-20 bg-black">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="orbitron text-4xl md:text-5xl font-normal mb-4 neon-glow">Let's connect!</h2>
+                <h2 class="orbitron text-4xl md:text-5xl font-normal mb-4 neon-glow">Let's connect!</h2><br></br>
                 <p class="text-gray-400 text-lg">Feel free to message me if you want to discuss about anything.</p>
             </div>
             
