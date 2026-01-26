@@ -5,165 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Vinh Le Van</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-bg: #0a0a0a;
-            --secondary-bg: #1a1a1a;
-            --neon-blue: #00d4ff;
-            --neon-white: #ffffff;
-            --muted-text: #b0b0b0;
-            --success-green: #00ff88;
-            --warning-red: #ff3366;
-        }
-        
-        body {
-            background: var(--primary-bg);
-            color: var(--neon-white);
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .orbitron {
-            font-family: 'Orbitron', monospace;
-        }
-        
-        .jetbrains {
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        .neon-glow {
-            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
-        }
-        
-        .neon-border {
-            border: 1px solid var(--neon-blue);
-            box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px rgba(0, 212, 255, 0.1);
-        }
-        
-        .neon-button {
-            background: transparent;
-            border: 2px solid var(--neon-blue);
-            color: var(--neon-blue);
-            transition: all 0.3s ease;
-        }
-        
-        .neon-button:hover {
-            background: var(--neon-blue);
-            color: var(--primary-bg);
-            box-shadow: 0 0 20px var(--neon-blue);
-        }
-        
-        .form-input {
-            background: var(--secondary-bg);
-            border: 1px solid #333;
-            color: var(--neon-white);
-            transition: all 0.3s ease;
-        }
-        
-        .form-input:focus {
-            outline: none;
-            border-color: var(--neon-blue);
-            box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
-        }
-        
-        .form-input.error {
-            border-color: var(--warning-red);
-            box-shadow: 0 0 10px rgba(255, 51, 102, 0.3);
-        }
-        
-        .form-input.success {
-            border-color: var(--success-green);
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-        
-        .nav-link {
-            position: relative;
-            color: var(--muted-text);
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--neon-blue);
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--neon-blue);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .contact-card {
-            background: var(--secondary-bg);
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid #333;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            border-color: var(--neon-blue);
-            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
-        }
-        
-        .social-link {
-            background: var(--secondary-bg);
-            border: 1px solid #333;
-            color: var(--muted-text);
-            transition: all 0.3s ease;
-        }
-        
-        .social-link:hover {
-            border-color: var(--neon-blue);
-            color: var(--neon-blue);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
-        }
-        
-        .success-message {
-            background: rgba(0, 255, 136, 0.1);
-            border: 1px solid var(--success-green);
-            color: var(--success-green);
-        }
-        
-        .error-message {
-            background: rgba(255, 51, 102, 0.1);
-            border: 1px solid var(--warning-red);
-            color: var(--warning-red);
-        }
-        
-        .loading-spinner {
-            border: 2px solid var(--secondary-bg);
-            border-top: 2px solid var(--neon-blue);
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -172,9 +16,7 @@
             <div class="flex justify-between items-center">
                 <div class="orbitron text-xl font-bold neon-glow">VAN VINH LE</div>
                 <div class="flex space-x-8">
-                    <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
-                    <a href="portfolio.html" class="nav-link">Portfolio</a>
                     <a href="contact.html" class="nav-link text-neon-blue">Contact</a>
                 </div>
             </div>
